@@ -1,0 +1,12 @@
+Your code =:= 123456
+[Ex 01] Link to your repo =:= https://github.com/fungoman/ASE00-mock123456.git
+[Ex 05] Command to create the image =:= docker build -t mockex .
+[Ex 05] Command to execute the container =:= docker run --name=mockexcont -p 5002:5001 mockex
+[Ex 05] PORTS string of output of the container list =:= 0.0.0.0:5002->5001/tcp, [::]:5002->5001/tcp
+[Ex 05] ["Config"]["Volumes"] field =:= null
+[Ex 09] Name of endpoint with the most Locust requests =:= azusa
+[Ex 09] Name of endpoint with the most failed Locust requests =:= mio
+[Ex 09] Name of endpoint with the highest median response time =:= ex1
+[Ex 11] Total number of issues =:= 2
+[Ex 11] Number of issues with high severity =:= 1
+[Ex 12] Header "exam" value =:= 123456

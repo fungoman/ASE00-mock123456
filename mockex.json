@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "17201c84-d0c7-49d2-b8e6-889ce91f18c5",
+		"name": "mockex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45097894"
+	},
+	"item": [
+		{
+			"name": "a=\"1a0\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"X = 1a0\", function(){",
+							"pm.response.to.have.status(200);",
+							"var jsonData = pm.response.json();",
+							"pm.expect(jsonData).to.eql({ \"s\": 2 });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8089/ex1?a=1a0",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"ex1"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "1a0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "a=\"ciao\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"X = ciao\", function(){",
+							"pm.response.to.have.status(200);",
+							"var jsonData = pm.response.json();",
+							"pm.expect(jsonData).to.eql({ \"s\": 0 });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8089/ex1?a=ciao",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"ex1"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "ciao"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "a=\"123\"",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"X = 123\", function(){",
+							"pm.response.to.have.status(400);",
+							"var jsonData = pm.response.json();",
+							"pm.expect(jsonData).to.eql({ \"s\": \"Invalid Input\" });",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8089/ex1?a=123",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"ex1"
+					],
+					"query": [
+						{
+							"key": "a",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
